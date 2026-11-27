@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+*.sqlite3
+*.sqlite3-journal
+.venv/
+venv/
+# model & data (besar; jangan di-commit)
+checkpoints/
+data/
+*.pt
+*.pth

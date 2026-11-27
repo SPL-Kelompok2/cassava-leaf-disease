@@ -1,0 +1,345 @@
+@prefix abox: <http://example.org/cassava-abox#> .
+@prefix cd: <https://www.sti-innsbruck.at/cassava-disease#> .
+@prefix ext: <http://example.org/cassava-extension#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cassava-abox> a owl:Ontology ;
+    owl:imports <http://example.org/cassava-extension>,
+        <https://www.sti-innsbruck.at/cassava-disease> .
+
+abox:obs_field_1_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_1 ;
+    sosa:hasSimpleResult 0.746 ;
+    sosa:observedProperty cd:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_1_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_1 ;
+    sosa:hasSimpleResult 13.511 ;
+    sosa:observedProperty cd:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_2_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_2 ;
+    sosa:hasSimpleResult 0.837 ;
+    sosa:observedProperty cd:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_2_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_2 ;
+    sosa:hasSimpleResult 13.105 ;
+    sosa:observedProperty cd:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_3_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_3 ;
+    sosa:hasSimpleResult 0.861 ;
+    sosa:observedProperty cd:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_3_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_3 ;
+    sosa:hasSimpleResult 37.754 ;
+    sosa:observedProperty cd:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_4_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_4 ;
+    sosa:hasSimpleResult 0.862 ;
+    sosa:observedProperty cd:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_4_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_4 ;
+    sosa:hasSimpleResult 33.361 ;
+    sosa:observedProperty cd:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_5_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_5 ;
+    sosa:hasSimpleResult 0.334 ;
+    sosa:observedProperty cd:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_field_5_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:field_5 ;
+    sosa:hasSimpleResult 36.302 ;
+    sosa:observedProperty cd:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_1_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_1 ;
+    sosa:hasSimpleResult 0.887 ;
+    sosa:observedProperty cd:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_1_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_1 ;
+    sosa:hasSimpleResult 6.99 ;
+    sosa:observedProperty cd:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_1_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_1 ;
+    sosa:hasSimpleResult 25.516 ;
+    sosa:observedProperty cd:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_2_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_2 ;
+    sosa:hasSimpleResult 0.145 ;
+    sosa:observedProperty cd:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_2_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_2 ;
+    sosa:hasSimpleResult 5.5 ;
+    sosa:observedProperty cd:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_2_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_2 ;
+    sosa:hasSimpleResult 14.715 ;
+    sosa:observedProperty cd:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_3_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_3 ;
+    sosa:hasSimpleResult 0.878 ;
+    sosa:observedProperty cd:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_3_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_3 ;
+    sosa:hasSimpleResult 3.616 ;
+    sosa:observedProperty cd:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_3_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_3 ;
+    sosa:hasSimpleResult 37.567 ;
+    sosa:observedProperty cd:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_4_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_4 ;
+    sosa:hasSimpleResult 0.357 ;
+    sosa:observedProperty cd:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_4_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_4 ;
+    sosa:hasSimpleResult 6.624 ;
+    sosa:observedProperty cd:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_4_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_4 ;
+    sosa:hasSimpleResult 20.517 ;
+    sosa:observedProperty cd:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_5_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_5 ;
+    sosa:hasSimpleResult 0.34 ;
+    sosa:observedProperty cd:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_5_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_5 ;
+    sosa:hasSimpleResult 9.084 ;
+    sosa:observedProperty cd:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+abox:obs_soil_5_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest abox:soil_5 ;
+    sosa:hasSimpleResult 9.81 ;
+    sosa:observedProperty cd:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+cd:CBBSoilTemperature cd:isConditionOf abox:plant_1 .
+
+cd:CGMSoilTemperature cd:isConditionOf abox:plant_3 .
+
+cd:CBBRainySeason cd:isConditionOf abox:plant_1,
+        abox:plant_4 .
+
+cd:CBBSoilPH cd:isConditionOf abox:plant_1,
+        abox:plant_4 .
+
+cd:CBSDRelativeHumidity cd:isConditionOf abox:plant_1,
+        abox:plant_2 .
+
+cd:CGMSoilMoisture cd:isConditionOf abox:plant_1,
+        abox:plant_3 .
+
+cd:CMDSoilTemperature cd:isConditionOf abox:plant_1,
+        abox:plant_4 .
+
+abox:field_1 a owl:NamedIndividual,
+        cd:Field ;
+    cd:hasRainySeason true .
+
+abox:field_2 a owl:NamedIndividual,
+        cd:Field ;
+    cd:hasRainySeason false .
+
+abox:field_3 a owl:NamedIndividual,
+        cd:Field ;
+    cd:hasRainySeason false .
+
+abox:field_4 a owl:NamedIndividual,
+        cd:Field ;
+    cd:hasRainySeason true .
+
+abox:field_5 a owl:NamedIndividual,
+        cd:Field ;
+    cd:hasRainySeason false .
+
+cd:CBSDSoilTemperature cd:isConditionOf abox:plant_1,
+        abox:plant_2,
+        abox:plant_4 .
+
+cd:CMDHighRainfall cd:isConditionOf abox:plant_2,
+        abox:plant_3,
+        abox:plant_4 .
+
+cd:CMDTemperature cd:isConditionOf abox:plant_3,
+        abox:plant_4,
+        abox:plant_5 .
+
+abox:plant_5 a owl:NamedIndividual,
+        cd:Plant ;
+    cd:hasCondition cd:CBBSoilMoisture,
+        cd:CBSDSoilMoisture,
+        cd:CMDSoilMoisture,
+        cd:CMDTemperature ;
+    cd:isPlantedIn abox:soil_5 .
+
+abox:soil_1 a owl:NamedIndividual,
+        cd:Soil ;
+    cd:isPartOfField abox:field_1 .
+
+abox:soil_2 a owl:NamedIndividual,
+        cd:Soil ;
+    cd:isPartOfField abox:field_2 .
+
+abox:soil_3 a owl:NamedIndividual,
+        cd:Soil ;
+    cd:isPartOfField abox:field_3 .
+
+abox:soil_4 a owl:NamedIndividual,
+        cd:Soil ;
+    cd:isPartOfField abox:field_4 .
+
+abox:soil_5 a owl:NamedIndividual,
+        cd:Soil ;
+    cd:isPartOfField abox:field_5 .
+
+cd:CBBSoilMoisture cd:isConditionOf abox:plant_1,
+        abox:plant_3,
+        abox:plant_4,
+        abox:plant_5 .
+
+cd:CGMRelativeHumidity cd:isConditionOf abox:plant_1,
+        abox:plant_2,
+        abox:plant_3,
+        abox:plant_4 .
+
+cd:CMDSoilMoisture cd:isConditionOf abox:plant_1,
+        abox:plant_3,
+        abox:plant_4,
+        abox:plant_5 .
+
+abox:plant_2 a ext:HighRiskPlant,
+        owl:NamedIndividual,
+        cd:Plant ;
+    ext:isFullyFavourableFor cd:CassavaBrownStreakDisease ;
+    cd:hasCondition cd:CBSDRelativeHumidity,
+        cd:CBSDSoilMoisture,
+        cd:CBSDSoilTemperature,
+        cd:CGMRelativeHumidity,
+        cd:CMDHighRainfall ;
+    cd:isPlantedIn abox:soil_2 .
+
+cd:CBSDSoilMoisture cd:isConditionOf abox:plant_1,
+        abox:plant_2,
+        abox:plant_3,
+        abox:plant_4,
+        abox:plant_5 .
+
+abox:plant_3 a ext:HighRiskPlant,
+        owl:NamedIndividual,
+        cd:Plant ;
+    ext:isFullyFavourableFor cd:CassavaGreenMottle ;
+    cd:hasCondition cd:CBBSoilMoisture,
+        cd:CBSDSoilMoisture,
+        cd:CGMRelativeHumidity,
+        cd:CGMSoilMoisture,
+        cd:CGMSoilTemperature,
+        cd:CMDHighRainfall,
+        cd:CMDSoilMoisture,
+        cd:CMDTemperature ;
+    cd:isPlantedIn abox:soil_3 .
+
+abox:plant_4 a ext:HighRiskPlant,
+        owl:NamedIndividual,
+        cd:Plant ;
+    ext:isFullyFavourableFor cd:CassavaMosaicDisease ;
+    cd:hasCondition cd:CBBRainySeason,
+        cd:CBBSoilMoisture,
+        cd:CBBSoilPH,
+        cd:CBSDSoilMoisture,
+        cd:CBSDSoilTemperature,
+        cd:CGMRelativeHumidity,
+        cd:CMDHighRainfall,
+        cd:CMDSoilMoisture,
+        cd:CMDSoilTemperature,
+        cd:CMDTemperature ;
+    cd:isPlantedIn abox:soil_4 .
+
+abox:plant_1 a ext:HighRiskPlant,
+        owl:NamedIndividual,
+        cd:Plant ;
+    ext:isFullyFavourableFor cd:CassavaBacterialBlight,
+        cd:CassavaBrownStreakDisease ;
+    cd:hasCondition cd:CBBRainySeason,
+        cd:CBBSoilMoisture,
+        cd:CBBSoilPH,
+        cd:CBBSoilTemperature,
+        cd:CBSDRelativeHumidity,
+        cd:CBSDSoilMoisture,
+        cd:CBSDSoilTemperature,
+        cd:CGMRelativeHumidity,
+        cd:CGMSoilMoisture,
+        cd:CMDSoilMoisture,
+        cd:CMDSoilTemperature ;
+    cd:isPlantedIn abox:soil_1 .
+

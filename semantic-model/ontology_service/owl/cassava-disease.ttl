@@ -1,0 +1,273 @@
+@prefix cassava-disease: <https://www.sti-innsbruck.at/cassava-disease#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.sti-innsbruck.at/cassava-disease> a owl:Ontology ;
+    owl:imports sosa: .
+
+cassava-disease:CBBRainySeason a owl:NamedIndividual,
+        cassava-disease:CBBCondition ;
+    skos:definition "The disease is more devastating during the rainy season."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBacterialBlight .
+
+cassava-disease:CBBSoilMoisture a owl:NamedIndividual,
+        cassava-disease:CBBCondition ;
+    skos:definition "The disease grows in moist soil and can withstand dry soil to an extend."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBacterialBlight .
+
+cassava-disease:CBBSoilPH a owl:NamedIndividual,
+        cassava-disease:CBBCondition ;
+    skos:definition "Soil pH of 6.5 to 7.2 enables the disease."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBacterialBlight .
+
+cassava-disease:CBBSoilTemperature a owl:NamedIndividual,
+        cassava-disease:CBBCondition ;
+    skos:definition "Soil temperature of 25 ⁰C to 30 ⁰C enables the disease."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBacterialBlight .
+
+cassava-disease:CBBVisualSymptoms a owl:NamedIndividual,
+        cassava-disease:DiseaseSymptom ;
+    skos:definition "The disease usually causes the following visual symptoms: wilting, die-back, angular necrotic spotting."@en ;
+    cassava-disease:isCausedByDisease cassava-disease:CassavaBacterialBlight .
+
+cassava-disease:CBSDRelativeHumidity a owl:NamedIndividual,
+        cassava-disease:CBSDCondition ;
+    skos:definition "A relative air humidity of 70% to 85% enables the disease vector."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBrownStreakDisease .
+
+cassava-disease:CBSDSoilMoisture a owl:NamedIndividual,
+        cassava-disease:CBSDCondition ;
+    skos:definition "The disease can thrive in both wet and dry soil."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBrownStreakDisease .
+
+cassava-disease:CBSDSoilTemperature a owl:NamedIndividual,
+        cassava-disease:CBSDCondition ;
+    skos:definition "Soil temperature of 10 ⁰C to 32 ⁰C enables the disease."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaBrownStreakDisease .
+
+cassava-disease:CBSDVisualSymptoms a owl:NamedIndividual,
+        cassava-disease:DiseaseSymptom ;
+    skos:definition "The disease usually causes the following visual symptoms: severe foliar chlorosis and necrosis, root rot, brown streaks on stems, tuber lesion."@en ;
+    cassava-disease:isCausedByDisease cassava-disease:CassavaBrownStreakDisease .
+
+cassava-disease:CGMRelativeHumidity a owl:NamedIndividual,
+        cassava-disease:CGMCondition ;
+    skos:definition "A relative air humidity of 70% and above enables the disease vector."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaGreenMottle .
+
+cassava-disease:CGMSoilMoisture a owl:NamedIndividual,
+        cassava-disease:CGMCondition ;
+    skos:definition "The disease thrives in very moist soil."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaGreenMottle .
+
+cassava-disease:CGMSoilTemperature a owl:NamedIndividual,
+        cassava-disease:CGMCondition ;
+    skos:definition "Soil temperature of 27°C and above enables the disease."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaGreenMottle .
+
+cassava-disease:CGMVisualSymptoms a owl:NamedIndividual,
+        cassava-disease:DiseaseSymptom ;
+    skos:definition "The disease usually causes the following visual symptoms: young leaves being puckered with distinct yellow spots, green pattern (mosaic), twisted margins."@en ;
+    cassava-disease:isCausedByDisease cassava-disease:CassavaGreenMottle .
+
+cassava-disease:CMDHighRainfall a owl:NamedIndividual,
+        cassava-disease:CMDCondition ;
+    skos:definition "High rainfall enables the disease vector."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaMosaicDisease .
+
+cassava-disease:CMDSoilMoisture a owl:NamedIndividual,
+        cassava-disease:CMDCondition ;
+    skos:definition "The disease able to adapt to different soil moisture levels."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaMosaicDisease .
+
+cassava-disease:CMDSoilTemperature a owl:NamedIndividual,
+        cassava-disease:CMDCondition ;
+    skos:definition "Soil temperature of 20 ⁰C to 32 ⁰C enables the disease."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaMosaicDisease .
+
+cassava-disease:CMDTemperature a owl:NamedIndividual,
+        cassava-disease:CMDCondition ;
+    skos:definition "High temperature enables the disease vector whitefly to thrive in the environment."@en ;
+    cassava-disease:enablesDisease cassava-disease:CassavaMosaicDisease .
+
+cassava-disease:CMDVisualSymptoms a owl:NamedIndividual,
+        cassava-disease:DiseaseSymptom ;
+    skos:definition "The disease usually causes the following visual symptoms: mosaic, mottling, twisted leaflet, reduction in size of leaves and plants."@en ;
+    cassava-disease:isCausedByDisease cassava-disease:CassavaMosaicDisease .
+
+cassava-disease:FungalPlantDisease a owl:Class ;
+    rdfs:subClassOf cassava-disease:PlantDisease .
+
+cassava-disease:HighSoilMoistureObservation a owl:Class ;
+    rdfs:subClassOf sosa:Observation ;
+    owl:disjointWith cassava-disease:LowSoilMoistureObservation,
+        cassava-disease:MediumSoilMoistureObservation ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( sosa:Observation [ a owl:Restriction ;
+                        owl:hasValue cassava-disease:SoilMoisture ;
+                        owl:onProperty sosa:observedProperty ] [ a owl:Restriction ;
+                        owl:onProperty sosa:hasSimpleResult ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:minInclusive 7 ] ) ] ] ) ] .
+
+cassava-disease:RelativeHumidity a owl:NamedIndividual,
+        sosa:ObservableProperty .
+
+cassava-disease:SoilPH a owl:NamedIndividual,
+        sosa:ObservableProperty .
+
+cassava-disease:SoilTemperature a owl:NamedIndividual,
+        sosa:ObservableProperty .
+
+cassava-disease:Temperature a owl:NamedIndividual,
+        sosa:ObservableProperty .
+
+cassava-disease:enabledByCondition a owl:ObjectProperty ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:enablesDisease .
+
+cassava-disease:hasCondition a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Plant ;
+    rdfs:range cassava-disease:DiseaseCondition ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:isConditionOf .
+
+cassava-disease:hasPlant a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Soil ;
+    rdfs:range cassava-disease:Plant ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:isPlantedIn .
+
+cassava-disease:hasRainySeason a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain cassava-disease:Field ;
+    rdfs:range xsd:boolean ;
+    rdfs:subPropertyOf owl:topDataProperty .
+
+cassava-disease:hasSoil a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Field ;
+    rdfs:range cassava-disease:Soil ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:isPartOfField .
+
+cassava-disease:hasSymptoms a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:PlantDisease ;
+    rdfs:range cassava-disease:DiseaseSymptom ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:isCausedByDisease .
+
+cassava-disease:infectedWith a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Plant ;
+    rdfs:range cassava-disease:PlantDisease ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf cassava-disease:infects .
+
+cassava-disease:BacterialPlantDisease a owl:Class ;
+    rdfs:subClassOf cassava-disease:PlantDisease .
+
+cassava-disease:LowSoilMoistureObservation a owl:Class ;
+    rdfs:subClassOf sosa:Observation ;
+    owl:disjointWith cassava-disease:MediumSoilMoistureObservation ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( sosa:Observation [ a owl:Restriction ;
+                        owl:hasValue cassava-disease:SoilMoisture ;
+                        owl:onProperty sosa:observedProperty ] [ a owl:Restriction ;
+                        owl:onProperty sosa:hasSimpleResult ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:onDatatype xsd:integer ;
+                                owl:withRestrictions ( [ xsd:maxExclusive 4 ] ) ] ] ) ] .
+
+cassava-disease:enablesDisease a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain cassava-disease:DiseaseCondition ;
+    rdfs:range cassava-disease:PlantDisease ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:infects a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:PlantDisease ;
+    rdfs:range cassava-disease:Plant ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:isCausedByDisease a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:DiseaseSymptom ;
+    rdfs:range cassava-disease:PlantDisease ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:isConditionOf a owl:ObjectProperty ;
+    rdfs:domain cassava-disease:DiseaseCondition ;
+    rdfs:range cassava-disease:Plant ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:isPartOfField a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Soil ;
+    rdfs:range cassava-disease:Field ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:isPlantedIn a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain cassava-disease:Plant ;
+    rdfs:range cassava-disease:Soil ;
+    rdfs:subPropertyOf owl:topObjectProperty .
+
+cassava-disease:MediumSoilMoistureObservation a owl:Class ;
+    rdfs:subClassOf sosa:Observation ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( sosa:Observation [ a owl:Restriction ;
+                        owl:hasValue cassava-disease:SoilMoisture ;
+                        owl:onProperty sosa:observedProperty ] [ a owl:Restriction ;
+                        owl:onProperty sosa:hasSimpleResult ;
+                        owl:someValuesFrom [ a rdfs:Datatype ;
+                                owl:intersectionOf ( [ a rdfs:Datatype ;
+                                            owl:onDatatype xsd:integer ;
+                                            owl:withRestrictions ( [ xsd:minInclusive 4 ] ) ] [ a rdfs:Datatype ;
+                                            owl:onDatatype xsd:integer ;
+                                            owl:withRestrictions ( [ xsd:maxExclusive 7 ] ) ] ) ] ] ) ] .
+
+cassava-disease:CBSDCondition a owl:Class ;
+    rdfs:subClassOf cassava-disease:DiseaseCondition .
+
+cassava-disease:CGMCondition a owl:Class ;
+    rdfs:subClassOf cassava-disease:DiseaseCondition .
+
+cassava-disease:Field a owl:Class .
+
+cassava-disease:SoilMoisture a owl:NamedIndividual,
+        sosa:ObservableProperty .
+
+cassava-disease:ViralPlantDisease a owl:Class ;
+    rdfs:subClassOf cassava-disease:PlantDisease .
+
+cassava-disease:CBBCondition a owl:Class ;
+    rdfs:subClassOf cassava-disease:DiseaseCondition .
+
+cassava-disease:CMDCondition a owl:Class ;
+    rdfs:subClassOf cassava-disease:DiseaseCondition .
+
+cassava-disease:CassavaBrownStreakDisease a owl:NamedIndividual,
+        cassava-disease:ViralPlantDisease .
+
+cassava-disease:CassavaGreenMottle a owl:NamedIndividual,
+        cassava-disease:ViralPlantDisease .
+
+cassava-disease:Soil a owl:Class .
+
+cassava-disease:CassavaBacterialBlight a owl:NamedIndividual,
+        cassava-disease:BacterialPlantDisease .
+
+cassava-disease:CassavaMosaicDisease a owl:NamedIndividual,
+        cassava-disease:ViralPlantDisease .
+
+cassava-disease:DiseaseSymptom a owl:Class .
+
+cassava-disease:Plant a owl:Class .
+
+cassava-disease:DiseaseCondition a owl:Class .
+
+cassava-disease:PlantDisease a owl:Class .
+

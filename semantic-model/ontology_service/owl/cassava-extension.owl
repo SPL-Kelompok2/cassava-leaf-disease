@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/cassava-extension"
+         xmlns="http://example.org/cassava-extension#">
+
+<owl:Ontology rdf:about="http://example.org/cassava-extension">
+  <owl:imports rdf:resource="https://www.sti-innsbruck.at/cassava-disease"/>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#isFullyFavourableFor">
+  <rdfs:domain rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+  <rdfs:range rdf:resource="https://www.sti-innsbruck.at/cassava-disease#PlantDisease"/>
+  <rdfs:comment xml:lang="id">Ekstensi implementasi ini (bukan dari paper): tanaman memenuhi SEMUA kondisi yang mendukung suatu penyakit menurut aturan pakar; bukan berarti terinfeksi.</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#HighRiskPlant">
+  <rdfs:subClassOf rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#isFullyFavourableFor"/>
+          <owl:someValuesFrom rdf:resource="https://www.sti-innsbruck.at/cassava-disease#PlantDisease"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:comment xml:lang="id">Ekstensi implementasi ini: tanaman yang memenuhi semua kondisi pendukung minimal satu penyakit.</rdfs:comment>
+</owl:Class>
+
+
+</rdf:RDF>

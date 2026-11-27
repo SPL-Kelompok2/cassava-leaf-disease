@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "args": {
+      "csv": "/kaggle/input/datasets/tahsin/cassava-leaf-disease-merged/merged.csv",
+      "img_dir": "/kaggle/input/datasets/tahsin/cassava-leaf-disease-merged/train",
+      "out": "/kaggle/working/vision/vision.pt",
+      "model": "volo_d2_384",
+      "img_size": 384,
+      "epochs": 10,
+      "batch_size": 16,
+      "lr": 0.0001,
+      "weight_decay": 1e-06,
+      "smoothing": 0.05,
+      "taylor_order": 2,
+      "crop_scale_min": 0.08,
+      "test_size": 0.2,
+      "seed": 2023,
+      "num_workers": 4,
+      "no_pretrained": false,
+      "no_amp": false,
+      "limit": null,
+      "label_col": "label",
+      "id_col": "image_id",
+      "source_col": "source"
+    },
+    "dataset": {
+      "total_rows": 26337,
+      "usable": 26337,
+      "missing_files": 0,
+      "duplicated_ids": 0,
+      "class_counts": {
+        "CBB": 1492,
+        "CBSD": 3476,
+        "CGM": 3017,
+        "CMD": 15462,
+        "Healthy": 2890
+      },
+      "source_counts": {
+        "2020": 21397,
+        "2019": 4940
+      },
+      "missing_examples": []
+    },
+    "n_train": 21071,
+    "n_test": 5266,
+    "torch": "2.11.0+cu130",
+    "timm": "1.0.30",
+    "device": "cuda",
+    "amp": true,
+    "history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.701664604835416,
+        "test_accuracy": 0.8602354728446638,
+        "lr": 9.757729755661011e-05,
+        "seconds": 1130.13445687294
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.6125940288272672,
+        "test_accuracy": 0.866122293961261,
+        "lr": 9.05463412215599e-05,
+        "seconds": 1105.7153429985046
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.5974693396624099,
+        "test_accuracy": 0.8733383972654767,
+        "lr": 7.959536998847742e-05,
+        "seconds": 1106.4663314819336
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.569251437068529,
+        "test_accuracy": 0.8885301936954045,
+        "lr": 6.57963412215599e-05,
+        "seconds": 1103.4246056079865
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.55229673321758,
+        "test_accuracy": 0.8820736802126852,
+        "lr": 5.05e-05,
+        "seconds": 1104.8919911384583
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.5290076417174745,
+        "test_accuracy": 0.8902392707937714,
+        "lr": 3.5203658778440106e-05,
+        "seconds": 1105.1947541236877
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.5004419066849813,
+        "test_accuracy": 0.893467527535131,
+        "lr": 2.1404630011522586e-05,
+        "seconds": 1104.4421021938324
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.48315771793703177,
+        "test_accuracy": 0.901253323205469,
+        "lr": 1.0453658778440109e-05,
+        "seconds": 1104.1829087734222
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.46784790011977717,
+        "test_accuracy": 0.899354348651728,
+        "lr": 3.4227024433899e-06,
+        "seconds": 1103.1713678836823
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.4491351390863262,
+        "test_accuracy": 0.9035320926699583,
+        "lr": 0.0001,
+        "seconds": 1104.6218256950378
+      }
+    ],
+    "total_seconds": 11076.898069381714
+  },
+  "final_test_metrics": {
+    "accuracy": 0.9035320926699583,
+    "n": 5266,
+    "per_class": {
+      "CBB": {
+        "precision": 0.6962457337883959,
+        "recall": 0.6845637583892618,
+        "f1": 0.6903553299492386,
+        "accuracy_ovr": 0.96524876566654,
+        "support": 298
+      },
+      "CBSD": {
+        "precision": 0.8636363636363636,
+        "recall": 0.8474820143884892,
+        "f1": 0.8554829339143064,
+        "accuracy_ovr": 0.9622104063805546,
+        "support": 695
+      },
+      "CGM": {
+        "precision": 0.8739352640545145,
+        "recall": 0.8507462686567164,
+        "f1": 0.8621848739495799,
+        "accuracy_ovr": 0.9688568173186479,
+        "support": 603
+      },
+      "CMD": {
+        "precision": 0.9585987261146497,
+        "recall": 0.9734799482535575,
+        "f1": 0.965982028241335,
+        "accuracy_ovr": 0.9597417394606912,
+        "support": 3092
+      },
+      "Healthy": {
+        "precision": 0.7836879432624113,
+        "recall": 0.7647058823529411,
+        "f1": 0.7740805604203151,
+        "accuracy_ovr": 0.9510064565134827,
+        "support": 578
+      }
+    },
+    "confusion_matrix": [
+      [
+        204,
+        31,
+        8,
+        14,
+        41
+      ],
+      [
+        31,
+        589,
+        15,
+        29,
+        31
+      ],
+      [
+        3,
+        15,
+        513,
+        47,
+        25
+      ],
+      [
+        10,
+        20,
+        27,
+        3010,
+        25
+      ],
+      [
+        45,
+        27,
+        24,
+        40,
+        442
+      ]
+    ],
+    "labels": [
+      "CBB",
+      "CBSD",
+      "CGM",
+      "CMD",
+      "Healthy"
+    ]
+  }
+}

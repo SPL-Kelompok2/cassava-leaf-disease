@@ -1,0 +1,1679 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/cassava-rules"
+         xmlns="http://example.org/cassava-rules#"
+         xmlns:swrl="http://www.w3.org/2003/11/swrl#">
+
+<owl:Ontology rdf:about="http://example.org/cassava-rules">
+  <owl:imports rdf:resource="https://www.sti-innsbruck.at/cassava-disease"/>
+  <owl:imports rdf:resource="http://example.org/cassava-extension"/>
+</owl:Ontology>
+
+<swrl:Variable rdf:about="urn:swrl#plant"/>
+
+<swrl:Variable rdf:about="urn:swrl#soil"/>
+
+<swrl:Variable rdf:about="urn:swrl#field"/>
+
+<swrl:Variable rdf:about="urn:swrl#rainy"/>
+
+<swrl:Variable rdf:about="urn:swrl#obs"/>
+
+<swrl:Variable rdf:about="urn:swrl#result"/>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDTemperature"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                  <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDSoilMoisture"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDSoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDHighRainfall"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://example.org/cassava-extension#isFullyFavourableFor"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CassavaMosaicDisease"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMSoilMoisture"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                  <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMRelativeHumidity"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMSoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://example.org/cassava-extension#isFullyFavourableFor"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CassavaGreenMottle"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDRelativeHumidity"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                  <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDSoilMoisture"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDSoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://example.org/cassava-extension#isFullyFavourableFor"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CassavaBrownStreakDisease"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBRainySeason"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                  <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilMoisture"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilPH"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilTemperature"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="http://example.org/cassava-extension#isFullyFavourableFor"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CassavaBacterialBlight"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPartOfField"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#field"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#field"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                            </swrl:DatavaluedPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDHighRainfall"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDSoilTemperature"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDSoilMoisture"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPartOfField"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#field"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#field"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                            </swrl:DatavaluedPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CMDTemperature"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMSoilTemperature"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPartOfField"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#field"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#field"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                            </swrl:DatavaluedPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMRelativeHumidity"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CGMSoilMoisture"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDSoilTemperature"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.1</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDSoilMoisture"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPartOfField"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#field"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#field"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:IndividualPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+                        </swrl:IndividualPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:DatavaluedPropertyAtom>
+                              <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                              <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                              <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                            </swrl:DatavaluedPropertyAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:first>
+                                    <swrl:BuiltinAtom>
+                                      <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                      <swrl:arguments>
+                                        <rdf:Description>
+                                          <rdf:first rdf:resource="urn:swrl#result"/>
+                                          <rdf:rest>
+                                            <rdf:Description>
+                                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.85</rdf:first>
+                                            </rdf:Description>
+                                          </rdf:rest>
+                                        </rdf:Description>
+                                      </swrl:arguments>
+                                    </swrl:BuiltinAtom>
+                                  </rdf:first>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBSDRelativeHumidity"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilTemperature"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest>
+                            <rdf:Description>
+                              <rdf:first>
+                                <swrl:BuiltinAtom>
+                                  <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                  <swrl:arguments>
+                                    <rdf:Description>
+                                      <rdf:first rdf:resource="urn:swrl#result"/>
+                                      <rdf:rest>
+                                        <rdf:Description>
+                                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                          <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.2</rdf:first>
+                                        </rdf:Description>
+                                      </rdf:rest>
+                                    </rdf:Description>
+                                  </swrl:arguments>
+                                </swrl:BuiltinAtom>
+                              </rdf:first>
+                              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                          </rdf:rest>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilPH"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#obs"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                      <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:DatavaluedPropertyAtom>
+                          <swrl:propertyPredicate rdf:resource="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+                          <swrl:argument1 rdf:resource="urn:swrl#obs"/>
+                          <swrl:argument2 rdf:resource="urn:swrl#result"/>
+                        </swrl:DatavaluedPropertyAtom>
+                      </rdf:first>
+                      <rdf:rest>
+                        <rdf:Description>
+                          <rdf:first>
+                            <swrl:BuiltinAtom>
+                              <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                              <swrl:arguments>
+                                <rdf:Description>
+                                  <rdf:first rdf:resource="urn:swrl#result"/>
+                                  <rdf:rest>
+                                    <rdf:Description>
+                                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                      <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</rdf:first>
+                                    </rdf:Description>
+                                  </rdf:rest>
+                                </rdf:Description>
+                              </swrl:arguments>
+                            </swrl:BuiltinAtom>
+                          </rdf:first>
+                          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:Description>
+                      </rdf:rest>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBSoilMoisture"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Plant"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPlantedIn"/>
+              <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+              <swrl:argument2 rdf:resource="urn:swrl#soil"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#isPartOfField"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#soil"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#field"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:DatavaluedPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasRainySeason"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#field"/>
+                      <swrl:argument2 rdf:resource="urn:swrl#rainy"/>
+                    </swrl:DatavaluedPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest>
+                    <rdf:Description>
+                      <rdf:first>
+                        <swrl:BuiltinAtom>
+                          <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#equal"/>
+                          <swrl:arguments>
+                            <rdf:Description>
+                              <rdf:first rdf:resource="urn:swrl#rainy"/>
+                              <rdf:rest>
+                                <rdf:Description>
+                                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                  <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</rdf:first>
+                                </rdf:Description>
+                              </rdf:rest>
+                            </rdf:Description>
+                          </swrl:arguments>
+                        </swrl:BuiltinAtom>
+                      </rdf:first>
+                      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                  </rdf:rest>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="https://www.sti-innsbruck.at/cassava-disease#hasCondition"/>
+          <swrl:argument1 rdf:resource="urn:swrl#plant"/>
+          <swrl:argument2 rdf:resource="https://www.sti-innsbruck.at/cassava-disease#CBBRainySeason"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+
+</rdf:RDF>
