@@ -10,8 +10,8 @@ from conftest import needs_java
 
 pytestmark = needs_java
 APP = str(Path(__file__).resolve().parent.parent / "app.py")
-GO = "🔍 Diagnosa sekarang"
-VS_NONE, VS_PHOTO, VS_MANUAL = "Tanpa foto", "📷 Foto daun", "Vektor manual (pengujian)"
+GO = "Diagnosa sekarang"
+VS_NONE, VS_PHOTO, VS_MANUAL = "Tanpa foto", "Foto daun", "Vektor manual (pengujian)"
 
 
 def _new():
@@ -29,7 +29,7 @@ def _go(at):
 
 def _run(preset):
     at = _new()
-    at.radio(key="vision_source").set_value(VS_NONE).run()
+    at.segmented_control(key="vision_source").set_value(VS_NONE).run()
     at.selectbox(key="preset").select(preset).run()
     return _go(at)
 
@@ -81,7 +81,7 @@ def test_app_info_sehat_punya_peringatan_keterbatasan():
 def test_app_dengan_vektor_visi_manual_mengubah_keputusan():
     at = _new()
     at.selectbox(key="preset").select("Contoh CMD").run()
-    at.radio(key="vision_source").set_value(VS_MANUAL).run()
+    at.segmented_control(key="vision_source").set_value(VS_MANUAL).run()
     for c, v in {"CBB": 0.0, "CBSD": 0.0, "CGM": 0.0, "CMD": 0.0, "Healthy": 1.0}.items():
         at.number_input(key=f"v-{c}").set_value(v)
     _go(at)
@@ -94,19 +94,20 @@ def test_app_dengan_vektor_visi_manual_mengubah_keputusan():
 def test_app_bobot_mengubah_keputusan_tanpa_menjalankan_ulang_pellet():
     at = _new()
     at.selectbox(key="preset").select("Contoh CMD").run()
-    at.radio(key="vision_source").set_value(VS_MANUAL).run()
+    at.segmented_control(key="vision_source").set_value(VS_MANUAL).run()
     for c, v in {"CBB": 0.0, "CBSD": 0.0, "CGM": 0.0, "CMD": 0.0, "Healthy": 1.0}.items():
         at.number_input(key=f"v-{c}").set_value(v)
     _go(at)
     assert any("Sehat" in s for s in _subheaders(at))
     at.number_input(key="w_sem").set_value(5.0).run()  # semantik jauh lebih berbobot
+    [b for b in at.button if b.label == "Lihat hasil terakhir"][0].click().run()
     assert any("Cassava Mosaic Disease (CMD)" in s for s in _subheaders(at))
 
 
 def test_app_visi_saja_tanpa_sensor():
     at = _new()
     at.checkbox(key="use_sensors").uncheck().run()
-    at.radio(key="vision_source").set_value(VS_MANUAL).run()
+    at.segmented_control(key="vision_source").set_value(VS_MANUAL).run()
     for c, v in {"CBB": 0.0, "CBSD": 0.9, "CGM": 0.0, "CMD": 0.1, "Healthy": 0.0}.items():
         at.number_input(key=f"v-{c}").set_value(v)
     _go(at)
@@ -118,7 +119,7 @@ def test_app_visi_saja_tanpa_sensor():
 def test_app_tanpa_sumber_apa_pun_menampilkan_error():
     at = _new()
     at.checkbox(key="use_sensors").uncheck().run()
-    at.radio(key="vision_source").set_value(VS_NONE).run()
+    at.segmented_control(key="vision_source").set_value(VS_NONE).run()
     _go(at)
     assert any("minimal satu sumber" in e.value for e in at.error)
 
@@ -142,7 +143,7 @@ def test_app_foto_tanpa_unggah_menampilkan_error(tmp_path):
     ck = tmp_path / "v.pt"
     _tiny_checkpoint(ck)
     at = _new()
-    at.radio(key="vision_source").set_value(VS_PHOTO).run()
+    at.segmented_control(key="vision_source").set_value(VS_PHOTO).run()
     at.text_input(key="ckpt_path").set_value(str(ck)).run()
     _go(at)
     assert any("Unggah foto" in e.value for e in at.error)
@@ -150,9 +151,9 @@ def test_app_foto_tanpa_unggah_menampilkan_error(tmp_path):
 
 def test_app_foto_checkpoint_tidak_ada_memberi_peringatan(tmp_path):
     at = _new()
-    at.radio(key="vision_source").set_value(VS_PHOTO).run()
+    at.segmented_control(key="vision_source").set_value(VS_PHOTO).run()
     at.text_input(key="ckpt_path").set_value(str(tmp_path / "tidak-ada.pt")).run()
-    assert any("Checkpoint tidak ditemukan" in w.value for w in at.sidebar.warning)
+    assert any("Checkpoint tidak ditemukan" in w.value for w in at.warning)
 
 
 def test_app_foto_penuh_fusi_dengan_sensor(tmp_path):
@@ -160,7 +161,7 @@ def test_app_foto_penuh_fusi_dengan_sensor(tmp_path):
     _tiny_checkpoint(ck)
     at = _new()
     at.selectbox(key="preset").select("Contoh CMD").run()
-    at.radio(key="vision_source").set_value(VS_PHOTO).run()
+    at.segmented_control(key="vision_source").set_value(VS_PHOTO).run()
     at.text_input(key="ckpt_path").set_value(str(ck)).run()
     at.file_uploader(key="photo").upload("daun.jpg", _jpeg_bytes(), "image/jpeg").run()
     _go(at)
@@ -168,3 +169,14 @@ def test_app_foto_penuh_fusi_dengan_sensor(tmp_path):
     assert any(s.startswith("Kesimpulan:") for s in _subheaders(at))
     assert at.metric[0].value != "-" and at.metric[1].value != "-"  # keyakinan visual & pengetahuan
     assert any("Weighted majority voting" in m.value for m in at.markdown)
+
+
+# ---------------------------------------------------------------- knowledge graph (Mode pakar)
+def test_app_knowledge_graph_tbox_dan_abox():
+    at = _new()
+    assert [m for m in at.metric if m.label == "Object property"]  # T-Box tampil tanpa diagnosa
+    at = _run("Contoh CMD")
+    at.segmented_control(key="kg_view").set_value("A-Box (fakta)").run()
+    assert not at.exception
+    inf = [m for m in at.metric if m.label == "Fakta hasil inferensi"]
+    assert inf and int(inf[0].value) >= 4  # 4 kondisi CMD terpenuhi -> hasCondition

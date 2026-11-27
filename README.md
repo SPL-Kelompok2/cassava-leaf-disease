@@ -14,6 +14,14 @@ Implementasi mengacu pada:
 > Data sensor pada demo adalah simulasi atau masukan pengguna. Keluaran adalah skor kesesuaian kondisi dan prediksi
 > model, **bukan diagnosis resmi**.
 
+## Kelompok 2
+
+| Nama | NIM |
+|------|-----|
+| Alissa Dyah Ayu Permatasari | 25/575323/PPA/07279 |
+| Elsa Aiziyah | 25/572243/PPA/07187 |
+| Farichaturrifqi Aryanitasari | 25/574224/PPA/07240 |
+
 ## Fitur
 
 - **Model semantik**: 14 aturan SWRL (ambang Tabel 1 paper) dijalankan oleh Pellet atas ontologi dan data sensor
