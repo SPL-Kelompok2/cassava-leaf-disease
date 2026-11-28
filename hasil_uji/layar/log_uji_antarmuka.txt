@@ -1,0 +1,12 @@
+foto test/cbb/cbb.0.jpg | label dataset CBB | prediksi CSV CBSD | layar: Kesimpulan: Cassava Brown Streak Disease (CBSD) | cocok dengan CSV: True
+foto test/cbsd/cbsd.0.jpg | label dataset CBSD | prediksi CSV CBSD | layar: Kesimpulan: Cassava Brown Streak Disease (CBSD) | cocok dengan CSV: True
+foto test/cgm/cgm.0.jpg | label dataset CGM | prediksi CSV CGM | layar: Kesimpulan: Cassava Green Mottle (CGM) | cocok dengan CSV: True
+foto test/cmd/cmd.0.jpg | label dataset CMD | prediksi CSV CMD | layar: Kesimpulan: Cassava Mosaic Disease (CMD) | cocok dengan CSV: True
+foto test/healthy/healthy.0.jpg | label dataset Healthy | prediksi CSV Healthy | layar: Kesimpulan: Sehat (Healthy) | cocok dengan CSV: True
+fusi CMD: Kesimpulan: Cassava Mosaic Disease (CMD) | teks Eq.1: True | catatan R14: True
+seri data lahan: True | CBB: True | CGM: True
+bobot nol: pesan tampil: True | dialog: 0
+vektor nol: pesan tampil: True
+catatan R14 di jejak aturan: True
+catatan CGM di CQ5: True
+MASALAH: tidak ada

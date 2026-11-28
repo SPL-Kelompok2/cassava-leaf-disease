@@ -1,0 +1,245 @@
+@prefix : <http://example.org/cassava-abox#> .
+@prefix cass: <https://www.sti-innsbruck.at/cassava-disease#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/cassava-abox> a owl:Ontology ;
+    owl:imports <http://example.org/cassava-extension>,
+        <https://www.sti-innsbruck.at/cassava-disease> .
+
+:obs_field_1_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_1 ;
+    sosa:hasSimpleResult 0.746 ;
+    sosa:observedProperty cass:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_1_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_1 ;
+    sosa:hasSimpleResult 13.511 ;
+    sosa:observedProperty cass:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_2_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_2 ;
+    sosa:hasSimpleResult 0.837 ;
+    sosa:observedProperty cass:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_2_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_2 ;
+    sosa:hasSimpleResult 13.105 ;
+    sosa:observedProperty cass:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_3_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_3 ;
+    sosa:hasSimpleResult 0.861 ;
+    sosa:observedProperty cass:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_3_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_3 ;
+    sosa:hasSimpleResult 37.754 ;
+    sosa:observedProperty cass:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_4_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_4 ;
+    sosa:hasSimpleResult 0.862 ;
+    sosa:observedProperty cass:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_4_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_4 ;
+    sosa:hasSimpleResult 33.361 ;
+    sosa:observedProperty cass:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_5_RelativeHumidity a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_5 ;
+    sosa:hasSimpleResult 0.334 ;
+    sosa:observedProperty cass:RelativeHumidity ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_field_5_Temperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :field_5 ;
+    sosa:hasSimpleResult 36.302 ;
+    sosa:observedProperty cass:Temperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_1_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_1 ;
+    sosa:hasSimpleResult 0.887 ;
+    sosa:observedProperty cass:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_1_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_1 ;
+    sosa:hasSimpleResult 6.99 ;
+    sosa:observedProperty cass:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_1_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_1 ;
+    sosa:hasSimpleResult 25.516 ;
+    sosa:observedProperty cass:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_2_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_2 ;
+    sosa:hasSimpleResult 0.145 ;
+    sosa:observedProperty cass:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_2_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_2 ;
+    sosa:hasSimpleResult 5.5 ;
+    sosa:observedProperty cass:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_2_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_2 ;
+    sosa:hasSimpleResult 14.715 ;
+    sosa:observedProperty cass:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_3_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_3 ;
+    sosa:hasSimpleResult 0.878 ;
+    sosa:observedProperty cass:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_3_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_3 ;
+    sosa:hasSimpleResult 3.616 ;
+    sosa:observedProperty cass:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_3_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_3 ;
+    sosa:hasSimpleResult 37.567 ;
+    sosa:observedProperty cass:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_4_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_4 ;
+    sosa:hasSimpleResult 0.357 ;
+    sosa:observedProperty cass:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_4_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_4 ;
+    sosa:hasSimpleResult 6.624 ;
+    sosa:observedProperty cass:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_4_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_4 ;
+    sosa:hasSimpleResult 20.517 ;
+    sosa:observedProperty cass:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_5_SoilMoisture a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_5 ;
+    sosa:hasSimpleResult 0.34 ;
+    sosa:observedProperty cass:SoilMoisture ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_5_SoilPH a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_5 ;
+    sosa:hasSimpleResult 9.084 ;
+    sosa:observedProperty cass:SoilPH ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:obs_soil_5_SoilTemperature a owl:NamedIndividual,
+        sosa:Observation ;
+    sosa:hasFeatureOfInterest :soil_5 ;
+    sosa:hasSimpleResult 9.81 ;
+    sosa:observedProperty cass:SoilTemperature ;
+    sosa:resultTime "2026-11-25T08:00:00"^^xsd:dateTime .
+
+:plant_1 a owl:NamedIndividual,
+        cass:Plant ;
+    cass:isPlantedIn :soil_1 .
+
+:plant_2 a owl:NamedIndividual,
+        cass:Plant ;
+    cass:isPlantedIn :soil_2 .
+
+:plant_3 a owl:NamedIndividual,
+        cass:Plant ;
+    cass:isPlantedIn :soil_3 .
+
+:plant_4 a owl:NamedIndividual,
+        cass:Plant ;
+    cass:isPlantedIn :soil_4 .
+
+:plant_5 a owl:NamedIndividual,
+        cass:Plant ;
+    cass:isPlantedIn :soil_5 .
+
+:field_1 a owl:NamedIndividual,
+        cass:Field ;
+    cass:hasRainySeason true .
+
+:field_2 a owl:NamedIndividual,
+        cass:Field ;
+    cass:hasRainySeason false .
+
+:field_3 a owl:NamedIndividual,
+        cass:Field ;
+    cass:hasRainySeason false .
+
+:field_4 a owl:NamedIndividual,
+        cass:Field ;
+    cass:hasRainySeason true .
+
+:field_5 a owl:NamedIndividual,
+        cass:Field ;
+    cass:hasRainySeason false .
+
+:soil_1 a owl:NamedIndividual,
+        cass:Soil ;
+    cass:isPartOfField :field_1 .
+
+:soil_2 a owl:NamedIndividual,
+        cass:Soil ;
+    cass:isPartOfField :field_2 .
+
+:soil_3 a owl:NamedIndividual,
+        cass:Soil ;
+    cass:isPartOfField :field_3 .
+
+:soil_4 a owl:NamedIndividual,
+        cass:Soil ;
+    cass:isPartOfField :field_4 .
+
+:soil_5 a owl:NamedIndividual,
+        cass:Soil ;
+    cass:isPartOfField :field_5 .
+

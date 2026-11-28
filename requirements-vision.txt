@@ -1,0 +1,8 @@
+# Tambahan untuk model visi (pelatihan + inferensi foto). Pasang SETELAH requirements.txt:
+#   pip install -r requirements.txt -r requirements-vision.txt
+# Diuji dengan torch 2.15, torchvision 0.29, timm 1.0.31 (Python 3.12).
+# Untuk GPU NVIDIA pasang torch build CUDA sesuai petunjuk https://pytorch.org/get-started/locally/
+# SEBELUM perintah di atas, agar tidak terpasang build CPU.
+torch>=2.4
+torchvision>=0.19
+timm>=1.0

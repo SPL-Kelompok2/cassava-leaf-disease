@@ -1,0 +1,11 @@
+Baris CSV: 5925 | citra terpakai: 5925 | berkas hilang: 0 | image_id ganda: 0
+
+IDENTIK (SHA-256)
+  grup ganda: 15 | citra di dalamnya: 30 | salinan berlebih: 15 | grup berlabel bentrok: 13
+  grup yang menyeberang latih/validasi/uji (kebocoran): 0
+
+IDENTIK atau MIRIP (dHash <= 4; perlu dicek mata)
+  grup ganda: 39 | citra di dalamnya: 81 | salinan berlebih: 42 | grup berlabel bentrok: 17
+  grup yang menyeberang latih/validasi/uji (kebocoran): 3
+
+Laporan grup ganda: hasil_uji/foto_nyata/laporan_duplikat.csv (81 baris)

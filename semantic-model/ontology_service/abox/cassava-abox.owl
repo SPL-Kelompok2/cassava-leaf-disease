@@ -1,0 +1,292 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://example.org/cassava-abox"
+         xmlns="http://example.org/cassava-abox#"
+         xmlns:cass="https://www.sti-innsbruck.at/cassava-disease#"
+         xmlns:sosa="http://www.w3.org/ns/sosa/">
+
+<owl:Ontology rdf:about="http://example.org/cassava-abox">
+  <owl:imports rdf:resource="https://www.sti-innsbruck.at/cassava-disease"/>
+  <owl:imports rdf:resource="http://example.org/cassava-extension"/>
+</owl:Ontology>
+
+<cass:Field rdf:about="#field_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:hasRainySeason rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cass:hasRainySeason>
+</cass:Field>
+
+<cass:Soil rdf:about="#soil_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPartOfField rdf:resource="#field_1"/>
+</cass:Soil>
+
+<cass:Plant rdf:about="#plant_1">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPlantedIn rdf:resource="#soil_1"/>
+</cass:Plant>
+
+<sosa:Observation rdf:about="#obs_soil_1_SoilMoisture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_1"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.887</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_1_SoilTemperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_1"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.516</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_1_RelativeHumidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_1"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.746</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_1_Temperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_1"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.511</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_1_SoilPH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_1"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.99</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<cass:Field rdf:about="#field_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:hasRainySeason rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cass:hasRainySeason>
+</cass:Field>
+
+<cass:Soil rdf:about="#soil_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPartOfField rdf:resource="#field_2"/>
+</cass:Soil>
+
+<cass:Plant rdf:about="#plant_2">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPlantedIn rdf:resource="#soil_2"/>
+</cass:Plant>
+
+<sosa:Observation rdf:about="#obs_soil_2_SoilMoisture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_2"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.145</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_2_SoilTemperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_2"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.715</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_2_RelativeHumidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_2"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.837</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_2_Temperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_2"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.105</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_2_SoilPH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_2"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.5</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<cass:Field rdf:about="#field_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:hasRainySeason rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cass:hasRainySeason>
+</cass:Field>
+
+<cass:Soil rdf:about="#soil_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPartOfField rdf:resource="#field_3"/>
+</cass:Soil>
+
+<cass:Plant rdf:about="#plant_3">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPlantedIn rdf:resource="#soil_3"/>
+</cass:Plant>
+
+<sosa:Observation rdf:about="#obs_soil_3_SoilMoisture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_3"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.878</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_3_SoilTemperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_3"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.567</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_3_RelativeHumidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_3"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.861</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_3_Temperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_3"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.754</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_3_SoilPH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_3"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.616</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<cass:Field rdf:about="#field_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:hasRainySeason rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cass:hasRainySeason>
+</cass:Field>
+
+<cass:Soil rdf:about="#soil_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPartOfField rdf:resource="#field_4"/>
+</cass:Soil>
+
+<cass:Plant rdf:about="#plant_4">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPlantedIn rdf:resource="#soil_4"/>
+</cass:Plant>
+
+<sosa:Observation rdf:about="#obs_soil_4_SoilMoisture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_4"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.357</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_4_SoilTemperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_4"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.517</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_4_RelativeHumidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_4"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.862</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_4_Temperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_4"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">33.361</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_4_SoilPH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_4"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.624</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<cass:Field rdf:about="#field_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:hasRainySeason rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</cass:hasRainySeason>
+</cass:Field>
+
+<cass:Soil rdf:about="#soil_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPartOfField rdf:resource="#field_5"/>
+</cass:Soil>
+
+<cass:Plant rdf:about="#plant_5">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <cass:isPlantedIn rdf:resource="#soil_5"/>
+</cass:Plant>
+
+<sosa:Observation rdf:about="#obs_soil_5_SoilMoisture">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilMoisture"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_5"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.34</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_5_SoilTemperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilTemperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_5"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.81</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_5_RelativeHumidity">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#RelativeHumidity"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_5"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.334</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_field_5_Temperature">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#Temperature"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#field_5"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.302</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+<sosa:Observation rdf:about="#obs_soil_5_SoilPH">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <sosa:observedProperty rdf:resource="https://www.sti-innsbruck.at/cassava-disease#SoilPH"/>
+  <sosa:hasFeatureOfInterest rdf:resource="#soil_5"/>
+  <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.084</sosa:hasSimpleResult>
+  <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-11-25T08:00:00</sosa:resultTime>
+</sosa:Observation>
+
+
+</rdf:RDF>
